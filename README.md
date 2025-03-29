@@ -1,52 +1,65 @@
-# 🚀 10 PROJETOS BACKEND
+# Sistema de reservas de hotel 🏨
 
-> Nesta apresentação, detalharemos os 10 projetos iniciais desenvolvidos para a dinâmica da Programmer Girl, voltada para mulheres que desejam obter mais conhecimento dentro do desenvolvimento back-end. Esses projetos foram cuidadosamente planejados para proporcionar 
-desafios práticos e acessíveis, permitindo que as participantes explorem tecnologias amplamente utilizadas no mercado, além de integrações com APIs e serviços externos.
->
-> O objetivo dessa dinâmica é oferecer às membras da comunidade a oportunidade de aplicar conceitos fundamentais de back-end, aprender na prática e desenvolver habilidades técnicas e colaborativas, criando soluções funcionais enquanto experimenta e aprende com erros e acertos.
->
-> Acesse a nossa gravação da apresentação clicando [aqui](https://youtu.be/HvJyIFxnHmE?si=Ltdzzh7w84q0e1ic), e acesse o material utilizado clicando [aqui](https://1drv.ms/b/c/25fdfc9c4be8cd64/EesDb6nsiixOp1IG7-mLR8MBaB1s66f3vUq068V6TJVBDA?e=Y1YdDg). ✨
 
-![image](https://github.com/user-attachments/assets/7c28794b-467a-46e1-8548-b83775bd5239)
-![image](https://github.com/user-attachments/assets/2fcaaae0-e29c-4ff4-935b-cd41861683f0)
+**Arquitetura:** AO sistema de reservas seguirá uma arquitetura monolítica baseada no padrão RESTful e no Domain-Driven Design (DDD)
+para uma modelagem eficiente. O foco será em performance, escalabilidade e otimização do banco de dados, utilizando caching
+para suportar grandes volumes de requisições. A estrutura inicial permitirá evolução ágil, com transição para microsserviços
+no futuro, se necessário. Serão aplicadas práticas de Clean Code, SOLID e Test-Driven Development (TDD), garantindo código
+limpo, testável e fácil de manter.
 
-## 💡 Desenvolvimento
-✅ Cada administradora ficou responsável por acompanhar e mentorear grupos com 3, dentre 30, pessoas #ProGirls;\
-✅ Abaixo estão a lista dos projetos que cada admministradora ficou responsável;\
-✅ Também, há os códigos criados pelas próprias participantes da dinâmica #ProGirls, separados por grupo.
+<br>
 
-## 💻 Divisão de Projetos
-```bash
-A administradora @Letycia-Locha ficou responsável pelos seguintes projetos:
-• API RESTful para E-commerce;
-• Plataforma de Streaming de Video;
-• Aplicativo de Delivery de Comida;
-• Sistema de Gestão de Projetos.
+**Objetivo:** O objetivo deste projeto é criar um sistema de reservas de hotel que, inicialmente, forneça funcionalidades
+essenciais como o gerenciamento de clientes, reservas, quartos, categorias, benefícios, pagamentos e endereços por meio de
+operações de CRUD. O sistema também permitirá consultas personalizadas, como o histórico de reservas e a disponibilidade 
+em tempo real dos quartos. A lógica de negócios garantirá a disponibilidade de quartos, o processamento de pagamentos e 
+a aplicação de benefícios nas reservas. A longo prazo, o sistema será aprimorado para suportar melhorias como segurança,
+mensageria para notificações, e escalabilidade para atender a um número crescente de usuários e reservas. O foco será em
+fornecer uma plataforma de alta performance, capaz de evoluir com as necessidades do negócio.
 
-A administradora @pamelabrito ficou responsável pelos seguintes projetos:
-• Sistema de Gerenciamento de Usuários;
-• Sistema de Blog;
-• Sistemas de Reservas de Hotel;
-• Plataforma de E-learning.
-```
+<br>
 
-## 🛠️ Códigos Criados Pelas #ProGirls
-• PROJETO 01: [API RESTful para E-commerce](https://github.com/Programmer-Girls/API_RESTfull_com_pagamento);\
-• PROJETO 02: Plataforma de Streaming de Video;\
-• PROJETO 03: [Aplicativo de Delivery de Comida](https://github.com/Programmer-Girls/delivery);\
-• PROJETO 04: [Sistema de Gestão de Projetos](https://github.com/Programmer-Girls/gestao_de_projetos).
+## Resumo técnico
 
-• PROJETO 05: [Sistema de Gerenciamento de Usuários](https://github.com/Programmer-Girls/sistema-de-gerenciamento);\
-• PROJETO 06: [Sistema de Blog](https://github.com/Programmer-Girls/sistema_de_blog);\
-• PROJETO 07: [Sistemas de Reservas de Hotel](https://github.com/Programmer-Girls/hotel_reservas);\
-• PROJETO 08: Plataforma de E-learning.
+   **Versões:** Este projeto foi desenvolvido com Java 17, utilizando o Spring Framework 3.4.2 para implementar a lógica
+   de aplicação. A gestão de dependências é feita através do Maven. O banco de dados utilizado é o PostgreSQL versão 13.x,
+   garantindo a persistência dos dados e alta performance nas consultas.
 
-### 🌐 Créditos & Contatos
-> [!IMPORTANT]
-> Esta dinâmica foi criada, elaborada e projetada pela comunidade Programmer Girl™. Não reutilize.\
-> Ficou interessade em nossa comunidade? Nos siga nas nossas [REDES SOCIAIS](https://linktr.ee/progirls)!
->
-> 💜 Feito com dedicação e muito código!
-> 
-> **Project Scope by:** @Letycia-Locha.\
-> **Presentation Material & GitHub Designed by:** @pamelabrito.
+<br>
+
+## Diagrama de Classes
+
+<p align="center"> 
+   <img src="diagramaDeClasses.png" alt="Diagrama de Classes">
+</p>
+
+
+<br>
+<br>
+
+## Banco de dados
+
+**Instância**: Este projeto utiliza o PostgreSQL hospedado no Render. Para configurar e acessar o banco de dados, siga os passos abaixo:
+
+- Para gerenciar o banco de dados de forma visual, você pode usar o pgAdmin - Baixe e instale o pgAdmin em [pgadmin.org](pgadmin.org).
+- Abra o pgAdmin e, na interface, clique com o botão direito em "Servers" e selecione Create > Server.
+- Na janela que abrir, insira as informações de conexão do Render, como Name, Host, Port, Username e Password. (Dados fornecidos pela Render).
+
+Para acessar os dados da instância do banco de dados, entre em contato com a [Ana Ingrid](https://github.com/ana-ingrid).
+
+<br>
+<br>
+
+## Como realizar a organização dentro do seu Fork 📂
+
+**Branches de Funcionalidades:** Para cada tarefa ou funcionalidade específica, crie uma branch separada. Isso facilita o trabalho
+colaborativo e mantém o código organizado, evitando sobrecarga na branch principal. Algumas convenções de nome para as branches:
+
+- feature/crud-clientes
+- feature/crud-reservas
+- feature/consultas-personalizadas
+- feature/integracao-pgadmin
+
+
+**Pull Requests (PRs):** Ao finalizar uma tarefa, crie um Pull Request para mesclar as alterações da sua branch de funcionalidades
+na branch principal (main) do repositório principal. Certifique-se de que o PR está associado à issue correspondente, para que todos possam acompanhar o progresso da tarefa.
